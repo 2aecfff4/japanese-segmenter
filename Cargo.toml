@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "tools/*"]
+
+[workspace.package]
+version = "0.1.0"
+
+[profile.dev]
+debug = 2
+
+[profile.release]
+lto = true
+debug = true
+
+[workspace.dependencies]
+# Local crates
+segmenter = { path = "./crates/segmenter" }
